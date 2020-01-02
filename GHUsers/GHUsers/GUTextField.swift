@@ -23,7 +23,7 @@ class GUTextField: UITextField {
     private func configure() {
         layer.cornerRadius = 10
         layer.borderWidth = 2
-        layer.backgroundColor = UIColor.systemGray4.cgColor
+        layer.backgroundColor = UIColor.systemGray3.cgColor
         
         textColor = .label
         tintColor = .label

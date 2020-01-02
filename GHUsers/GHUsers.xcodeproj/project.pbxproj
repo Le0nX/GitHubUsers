@@ -17,6 +17,7 @@
 		144096A423BE975800A53114 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144096A323BE975800A53114 /* FavoritesViewController.swift */; };
 		144096A623BEA57600A53114 /* GUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144096A523BEA57600A53114 /* GUButton.swift */; };
 		144096A823BEA87700A53114 /* GUTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144096A723BEA87700A53114 /* GUTextField.swift */; };
+		144096AA23BEADC900A53114 /* UIView+add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144096A923BEADC900A53114 /* UIView+add.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		144096A323BE975800A53114 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		144096A523BEA57600A53114 /* GUButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUButton.swift; sourceTree = "<group>"; };
 		144096A723BEA87700A53114 /* GUTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUTextField.swift; sourceTree = "<group>"; };
+		144096A923BEADC900A53114 /* UIView+add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+add.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		1440967E23BAA07A00A53114 /* GHUsers */ = {
 			isa = PBXGroup;
 			children = (
+				144096AB23BEADD500A53114 /* Extensions */,
 				1440967F23BAA07A00A53114 /* AppDelegate.swift */,
 				1440968123BAA07A00A53114 /* SceneDelegate.swift */,
 				144096A523BEA57600A53114 /* GUButton.swift */,
@@ -106,6 +109,14 @@
 				1440969823BAA07D00A53114 /* Info.plist */,
 			);
 			path = GHUsersTests;
+			sourceTree = "<group>";
+		};
+		144096AB23BEADD500A53114 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				144096A923BEADC900A53114 /* UIView+add.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				144096AA23BEADC900A53114 /* UIView+add.swift in Sources */,
 				1440968423BAA07A00A53114 /* ViewController.swift in Sources */,
 				144096A623BEA57600A53114 /* GUButton.swift in Sources */,
 				144096A823BEA87700A53114 /* GUTextField.swift in Sources */,
