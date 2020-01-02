@@ -13,6 +13,10 @@
 		1440968923BAA07C00A53114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1440968823BAA07C00A53114 /* Assets.xcassets */; };
 		1440968C23BAA07C00A53114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1440968A23BAA07C00A53114 /* LaunchScreen.storyboard */; };
 		1440969723BAA07D00A53114 /* GHUsersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440969623BAA07D00A53114 /* GHUsersTests.swift */; };
+		144096A223BE95D200A53114 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144096A123BE95D100A53114 /* SearchViewController.swift */; };
+		144096A423BE975800A53114 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144096A323BE975800A53114 /* FavoritesViewController.swift */; };
+		144096A623BEA57600A53114 /* GUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144096A523BEA57600A53114 /* GUButton.swift */; };
+		144096A823BEA87700A53114 /* GUTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144096A723BEA87700A53114 /* GUTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		1440969223BAA07D00A53114 /* GHUsersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHUsersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1440969623BAA07D00A53114 /* GHUsersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHUsersTests.swift; sourceTree = "<group>"; };
 		1440969823BAA07D00A53114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		144096A123BE95D100A53114 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		144096A323BE975800A53114 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		144096A523BEA57600A53114 /* GUButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUButton.swift; sourceTree = "<group>"; };
+		144096A723BEA87700A53114 /* GUTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +87,14 @@
 			children = (
 				1440967F23BAA07A00A53114 /* AppDelegate.swift */,
 				1440968123BAA07A00A53114 /* SceneDelegate.swift */,
+				144096A523BEA57600A53114 /* GUButton.swift */,
+				144096A723BEA87700A53114 /* GUTextField.swift */,
 				1440968323BAA07A00A53114 /* ViewController.swift */,
 				1440968823BAA07C00A53114 /* Assets.xcassets */,
 				1440968A23BAA07C00A53114 /* LaunchScreen.storyboard */,
 				1440968D23BAA07C00A53114 /* Info.plist */,
+				144096A123BE95D100A53114 /* SearchViewController.swift */,
+				144096A323BE975800A53114 /* FavoritesViewController.swift */,
 			);
 			path = GHUsers;
 			sourceTree = "<group>";
@@ -197,7 +209,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1440968423BAA07A00A53114 /* ViewController.swift in Sources */,
+				144096A623BEA57600A53114 /* GUButton.swift in Sources */,
+				144096A823BEA87700A53114 /* GUTextField.swift in Sources */,
 				1440968023BAA07A00A53114 /* AppDelegate.swift in Sources */,
+				144096A223BE95D200A53114 /* SearchViewController.swift in Sources */,
+				144096A423BE975800A53114 /* FavoritesViewController.swift in Sources */,
 				1440968223BAA07A00A53114 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
