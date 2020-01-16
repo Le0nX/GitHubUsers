@@ -41,7 +41,10 @@ class SearchViewController: UIViewController {
     
     @objc
     func pushUserListVC() {
-        guard isUsernameEntered else {return}
+        guard isUsernameEntered else {
+            presentAllertOnMainThread(title: "No username", message: "You have not entered any username", buttonTitle: "OK")
+            return
+        }
         
         let usersVC = UsersViewController()
         usersVC.userName = usernameTextField.text

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1437F64F23D107D100E6FAC0 /* SearchVC+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1437F64E23D107D100E6FAC0 /* SearchVC+UITextFieldDelegate.swift */; };
 		1437F65423D1092200E6FAC0 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1437F65323D1092200E6FAC0 /* UsersViewController.swift */; };
+		1437F65623D110FE00E6FAC0 /* GUTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1437F65523D110FE00E6FAC0 /* GUTitleLabel.swift */; };
+		1437F65823D112EE00E6FAC0 /* GUBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1437F65723D112EE00E6FAC0 /* GUBodyLabel.swift */; };
+		1437F65A23D113DF00E6FAC0 /* GUAllertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1437F65923D113DF00E6FAC0 /* GUAllertViewController.swift */; };
+		1437F65C23D11A9200E6FAC0 /* ViewController+Allert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1437F65B23D11A9200E6FAC0 /* ViewController+Allert.swift */; };
 		1440968023BAA07A00A53114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440967F23BAA07A00A53114 /* AppDelegate.swift */; };
 		1440968223BAA07A00A53114 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440968123BAA07A00A53114 /* SceneDelegate.swift */; };
 		1440968923BAA07C00A53114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1440968823BAA07C00A53114 /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 /* Begin PBXFileReference section */
 		1437F64E23D107D100E6FAC0 /* SearchVC+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchVC+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		1437F65323D1092200E6FAC0 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		1437F65523D110FE00E6FAC0 /* GUTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUTitleLabel.swift; sourceTree = "<group>"; };
+		1437F65723D112EE00E6FAC0 /* GUBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUBodyLabel.swift; sourceTree = "<group>"; };
+		1437F65923D113DF00E6FAC0 /* GUAllertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUAllertViewController.swift; sourceTree = "<group>"; };
+		1437F65B23D11A9200E6FAC0 /* ViewController+Allert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Allert.swift"; sourceTree = "<group>"; };
 		1440967C23BAA07A00A53114 /* GHUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1440967F23BAA07A00A53114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1440968123BAA07A00A53114 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +90,8 @@
 			children = (
 				144096A523BEA57600A53114 /* GUButton.swift */,
 				144096A723BEA87700A53114 /* GUTextField.swift */,
+				1437F65523D110FE00E6FAC0 /* GUTitleLabel.swift */,
+				1437F65723D112EE00E6FAC0 /* GUBodyLabel.swift */,
 			);
 			path = UILib;
 			sourceTree = "<group>";
@@ -124,6 +134,7 @@
 				144096A123BE95D100A53114 /* SearchViewController.swift */,
 				1437F65323D1092200E6FAC0 /* UsersViewController.swift */,
 				144096A323BE975800A53114 /* FavoritesViewController.swift */,
+				1437F65923D113DF00E6FAC0 /* GUAllertViewController.swift */,
 			);
 			path = GHUsers;
 			sourceTree = "<group>";
@@ -142,6 +153,7 @@
 			children = (
 				144096A923BEADC900A53114 /* UIView+add.swift */,
 				1437F64E23D107D100E6FAC0 /* SearchVC+UITextFieldDelegate.swift */,
+				1437F65B23D11A9200E6FAC0 /* ViewController+Allert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -247,12 +259,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				144096AA23BEADC900A53114 /* UIView+add.swift in Sources */,
+				1437F65823D112EE00E6FAC0 /* GUBodyLabel.swift in Sources */,
+				1437F65A23D113DF00E6FAC0 /* GUAllertViewController.swift in Sources */,
 				144096A623BEA57600A53114 /* GUButton.swift in Sources */,
 				144096A823BEA87700A53114 /* GUTextField.swift in Sources */,
 				1440968023BAA07A00A53114 /* AppDelegate.swift in Sources */,
 				1437F64F23D107D100E6FAC0 /* SearchVC+UITextFieldDelegate.swift in Sources */,
 				144096A223BE95D200A53114 /* SearchViewController.swift in Sources */,
 				144096A423BE975800A53114 /* FavoritesViewController.swift in Sources */,
+				1437F65C23D11A9200E6FAC0 /* ViewController+Allert.swift in Sources */,
+				1437F65623D110FE00E6FAC0 /* GUTitleLabel.swift in Sources */,
 				1437F65423D1092200E6FAC0 /* UsersViewController.swift in Sources */,
 				1440968223BAA07A00A53114 /* SceneDelegate.swift in Sources */,
 			);
