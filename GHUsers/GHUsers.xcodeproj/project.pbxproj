@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1437F64F23D107D100E6FAC0 /* SearchVC+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1437F64E23D107D100E6FAC0 /* SearchVC+UITextFieldDelegate.swift */; };
+		1437F65423D1092200E6FAC0 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1437F65323D1092200E6FAC0 /* UsersViewController.swift */; };
 		1440968023BAA07A00A53114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440967F23BAA07A00A53114 /* AppDelegate.swift */; };
 		1440968223BAA07A00A53114 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440968123BAA07A00A53114 /* SceneDelegate.swift */; };
-		1440968423BAA07A00A53114 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440968323BAA07A00A53114 /* ViewController.swift */; };
 		1440968923BAA07C00A53114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1440968823BAA07C00A53114 /* Assets.xcassets */; };
 		1440968C23BAA07C00A53114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1440968A23BAA07C00A53114 /* LaunchScreen.storyboard */; };
 		1440969723BAA07D00A53114 /* GHUsersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440969623BAA07D00A53114 /* GHUsersTests.swift */; };
@@ -31,10 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1437F64E23D107D100E6FAC0 /* SearchVC+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchVC+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		1437F65323D1092200E6FAC0 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		1440967C23BAA07A00A53114 /* GHUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1440967F23BAA07A00A53114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1440968123BAA07A00A53114 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1440968323BAA07A00A53114 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1440968823BAA07C00A53114 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1440968B23BAA07C00A53114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1440968D23BAA07C00A53114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +68,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1437F65023D108B000E6FAC0 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				1440967F23BAA07A00A53114 /* AppDelegate.swift */,
+				1440968123BAA07A00A53114 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		1437F65123D108BE00E6FAC0 /* UILib */ = {
+			isa = PBXGroup;
+			children = (
+				144096A523BEA57600A53114 /* GUButton.swift */,
+				144096A723BEA87700A53114 /* GUTextField.swift */,
+			);
+			path = UILib;
+			sourceTree = "<group>";
+		};
+		1437F65223D108E000E6FAC0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1440968A23BAA07C00A53114 /* LaunchScreen.storyboard */,
+				1440968D23BAA07C00A53114 /* Info.plist */,
+				1440968823BAA07C00A53114 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1440967323BAA07900A53114 = {
 			isa = PBXGroup;
 			children = (
@@ -87,16 +117,12 @@
 		1440967E23BAA07A00A53114 /* GHUsers */ = {
 			isa = PBXGroup;
 			children = (
+				1437F65223D108E000E6FAC0 /* Resources */,
+				1437F65123D108BE00E6FAC0 /* UILib */,
+				1437F65023D108B000E6FAC0 /* Delegate */,
 				144096AB23BEADD500A53114 /* Extensions */,
-				1440967F23BAA07A00A53114 /* AppDelegate.swift */,
-				1440968123BAA07A00A53114 /* SceneDelegate.swift */,
-				144096A523BEA57600A53114 /* GUButton.swift */,
-				144096A723BEA87700A53114 /* GUTextField.swift */,
-				1440968323BAA07A00A53114 /* ViewController.swift */,
-				1440968823BAA07C00A53114 /* Assets.xcassets */,
-				1440968A23BAA07C00A53114 /* LaunchScreen.storyboard */,
-				1440968D23BAA07C00A53114 /* Info.plist */,
 				144096A123BE95D100A53114 /* SearchViewController.swift */,
+				1437F65323D1092200E6FAC0 /* UsersViewController.swift */,
 				144096A323BE975800A53114 /* FavoritesViewController.swift */,
 			);
 			path = GHUsers;
@@ -115,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				144096A923BEADC900A53114 /* UIView+add.swift */,
+				1437F64E23D107D100E6FAC0 /* SearchVC+UITextFieldDelegate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -220,12 +247,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				144096AA23BEADC900A53114 /* UIView+add.swift in Sources */,
-				1440968423BAA07A00A53114 /* ViewController.swift in Sources */,
 				144096A623BEA57600A53114 /* GUButton.swift in Sources */,
 				144096A823BEA87700A53114 /* GUTextField.swift in Sources */,
 				1440968023BAA07A00A53114 /* AppDelegate.swift in Sources */,
+				1437F64F23D107D100E6FAC0 /* SearchVC+UITextFieldDelegate.swift in Sources */,
 				144096A223BE95D200A53114 /* SearchViewController.swift in Sources */,
 				144096A423BE975800A53114 /* FavoritesViewController.swift in Sources */,
+				1437F65423D1092200E6FAC0 /* UsersViewController.swift in Sources */,
 				1440968223BAA07A00A53114 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,7 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28XXG6S5AU;
-				INFOPLIST_FILE = GHUsers/Info.plist;
+				INFOPLIST_FILE = GHUsers/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,7 +426,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28XXG6S5AU;
-				INFOPLIST_FILE = GHUsers/Info.plist;
+				INFOPLIST_FILE = GHUsers/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -14,6 +14,10 @@ class SearchViewController: UIViewController {
     let usernameTextField = GUTextField()
     let actionButton = GUButton(backgroundColor: .systemGreen, title: "Get Users")
     
+    private var isUsernameEntered: Bool {
+        return !usernameTextField.text!.isEmpty
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -21,6 +25,7 @@ class SearchViewController: UIViewController {
         configureLogiImage()
         configureUserTextField()
         configureActionButton()
+        createDismissKeyboardRecognizer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,11 +37,27 @@ class SearchViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.isNavigationBarHidden = false
     }
+    
+    
+    @objc
+    func pushUserListVC() {
+        guard isUsernameEntered else {return}
+        
+        let usersVC = UsersViewController()
+        usersVC.userName = usernameTextField.text
+        usersVC.title = usernameTextField.text
+        navigationController?.pushViewController(usersVC, animated: true)
+    }
 }
 
 
 
 extension SearchViewController {
+    
+    private func createDismissKeyboardRecognizer() {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tap)
+    }
     private func configureLogiImage() {
         view.addSubview(logoImage)
         logoImage.image = UIImage(named: "gh-logo")
@@ -46,12 +67,16 @@ extension SearchViewController {
     
     private func configureUserTextField() {
         view.addSubview(usernameTextField)
+        usernameTextField.delegate = self
+        
         usernameTextField.anchor(top: logoImage.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 48, paddingLeft: 50, paddingBottom: 0, paddingRight: 50, width: 0, height: 50)
         usernameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     
     private func configureActionButton() {
         view.addSubview(actionButton)
+        actionButton.addTarget(self, action: #selector(pushUserListVC), for: .touchUpInside)
+        
         actionButton.anchor(top: nil, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 50, paddingBottom: -50, paddingRight: 50, width: 0, height: 50)
         actionButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
