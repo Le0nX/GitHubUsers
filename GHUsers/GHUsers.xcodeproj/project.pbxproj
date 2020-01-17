@@ -23,6 +23,8 @@
 		144096A623BEA57600A53114 /* GUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144096A523BEA57600A53114 /* GUButton.swift */; };
 		144096A823BEA87700A53114 /* GUTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144096A723BEA87700A53114 /* GUTextField.swift */; };
 		144096AA23BEADC900A53114 /* UIView+add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144096A923BEADC900A53114 /* UIView+add.swift */; };
+		146F3F3423D2446600ED40B0 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F3F3323D2446600ED40B0 /* Follower.swift */; };
+		146F3F3623D244BC00ED40B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F3F3523D244BB00ED40B0 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		144096A523BEA57600A53114 /* GUButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUButton.swift; sourceTree = "<group>"; };
 		144096A723BEA87700A53114 /* GUTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUTextField.swift; sourceTree = "<group>"; };
 		144096A923BEADC900A53114 /* UIView+add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+add.swift"; sourceTree = "<group>"; };
+		146F3F3323D2446600ED40B0 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		146F3F3523D244BB00ED40B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		1437F65D23D11EAE00E6FAC0 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				144096A123BE95D100A53114 /* SearchViewController.swift */,
+				1437F65323D1092200E6FAC0 /* UsersViewController.swift */,
+				144096A323BE975800A53114 /* FavoritesViewController.swift */,
+				1437F65923D113DF00E6FAC0 /* GUAllertViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		1440967323BAA07900A53114 = {
 			isa = PBXGroup;
 			children = (
@@ -127,14 +142,12 @@
 		1440967E23BAA07A00A53114 /* GHUsers */ = {
 			isa = PBXGroup;
 			children = (
+				146F3F3223D2445600ED40B0 /* Models */,
+				1437F65D23D11EAE00E6FAC0 /* Screens */,
 				1437F65223D108E000E6FAC0 /* Resources */,
 				1437F65123D108BE00E6FAC0 /* UILib */,
 				1437F65023D108B000E6FAC0 /* Delegate */,
 				144096AB23BEADD500A53114 /* Extensions */,
-				144096A123BE95D100A53114 /* SearchViewController.swift */,
-				1437F65323D1092200E6FAC0 /* UsersViewController.swift */,
-				144096A323BE975800A53114 /* FavoritesViewController.swift */,
-				1437F65923D113DF00E6FAC0 /* GUAllertViewController.swift */,
 			);
 			path = GHUsers;
 			sourceTree = "<group>";
@@ -156,6 +169,15 @@
 				1437F65B23D11A9200E6FAC0 /* ViewController+Allert.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		146F3F3223D2445600ED40B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				146F3F3323D2446600ED40B0 /* Follower.swift */,
+				146F3F3523D244BB00ED40B0 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +286,9 @@
 				144096A623BEA57600A53114 /* GUButton.swift in Sources */,
 				144096A823BEA87700A53114 /* GUTextField.swift in Sources */,
 				1440968023BAA07A00A53114 /* AppDelegate.swift in Sources */,
+				146F3F3423D2446600ED40B0 /* Follower.swift in Sources */,
 				1437F64F23D107D100E6FAC0 /* SearchVC+UITextFieldDelegate.swift in Sources */,
+				146F3F3623D244BC00ED40B0 /* User.swift in Sources */,
 				144096A223BE95D200A53114 /* SearchViewController.swift in Sources */,
 				144096A423BE975800A53114 /* FavoritesViewController.swift in Sources */,
 				1437F65C23D11A9200E6FAC0 /* ViewController+Allert.swift in Sources */,
