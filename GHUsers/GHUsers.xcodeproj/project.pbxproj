@@ -26,6 +26,7 @@
 		146F3F3423D2446600ED40B0 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F3F3323D2446600ED40B0 /* Follower.swift */; };
 		146F3F3623D244BC00ED40B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F3F3523D244BB00ED40B0 /* User.swift */; };
 		146F3F4823DCBA9F00ED40B0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F3F4723DCBA9F00ED40B0 /* NetworkManager.swift */; };
+		146F3F4B23DCCC9100ED40B0 /* NetworkManagerErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F3F4A23DCCC9100ED40B0 /* NetworkManagerErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		146F3F3323D2446600ED40B0 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		146F3F3523D244BB00ED40B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		146F3F4723DCBA9F00ED40B0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		146F3F4A23DCCC9100ED40B0 /* NetworkManagerErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerErrorMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		1440967E23BAA07A00A53114 /* GHUsers */ = {
 			isa = PBXGroup;
 			children = (
+				146F3F4923DCCC8200ED40B0 /* Utilities */,
 				146F3F4623DCBA8F00ED40B0 /* Managers */,
 				146F3F3223D2445600ED40B0 /* Models */,
 				1437F65D23D11EAE00E6FAC0 /* Screens */,
@@ -189,6 +192,14 @@
 				146F3F4723DCBA9F00ED40B0 /* NetworkManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		146F3F4923DCCC8200ED40B0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				146F3F4A23DCCC9100ED40B0 /* NetworkManagerErrorMessage.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				144096AA23BEADC900A53114 /* UIView+add.swift in Sources */,
+				146F3F4B23DCCC9100ED40B0 /* NetworkManagerErrorMessage.swift in Sources */,
 				1437F65823D112EE00E6FAC0 /* GUBodyLabel.swift in Sources */,
 				1437F65A23D113DF00E6FAC0 /* GUAllertViewController.swift in Sources */,
 				144096A623BEA57600A53114 /* GUButton.swift in Sources */,

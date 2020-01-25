@@ -18,14 +18,15 @@ class UsersViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         
         
-        NetworkManager.shared.getFollowers(for: userName, page: 1, completed: { data, error in
-            guard let data = data else {
-                self.presentAllertOnMainThread(title: "Invalid user data", message: error ?? "Whoops", buttonTitle: "OK")
-                return
-            }
+        NetworkManager.shared.getFollowers(for: userName, page: 1, completed: { result in
             
-            print("Followers.count = \(data.count)")
-            print(data)
+            switch result {
+            case .failure(let error):
+                self.presentAllertOnMainThread(title: "Invalid user data", message: error.rawValue, buttonTitle: "OK")
+            case .success(let followers):
+                print("Followers.count = \(followers.count)")
+                print(followers)
+            }
         })
     }
     
