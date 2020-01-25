@@ -16,7 +16,17 @@ class UsersViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
-        // Do any additional setup after loading the view.
+        
+        
+        NetworkManager.shared.getFollowers(for: userName, page: 1, completed: { data, error in
+            guard let data = data else {
+                self.presentAllertOnMainThread(title: "Invalid user data", message: error ?? "Whoops", buttonTitle: "OK")
+                return
+            }
+            
+            print("Followers.count = \(data.count)")
+            print(data)
+        })
     }
     
 
