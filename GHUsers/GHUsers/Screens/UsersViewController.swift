@@ -15,6 +15,8 @@ class UsersViewController: UIViewController {
     }
     
     var userName: String!
+    var page: Int = 1
+    var hasMoreFolloweres = true
     var followers = [Follower]()
     
     var collectionView: UICollectionView!
@@ -23,20 +25,23 @@ class UsersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureVC()
-        getFollowers()
+        getFollowers(username: userName, page: page)
         configureCollectionView()
         configureDataSource()
     }
     
-    func getFollowers() {
-        NetworkManager.shared.getFollowers(for: userName, page: 1, completed: { [weak self] result in
+    func getFollowers(username: String, page: Int) {
+        NetworkManager.shared.getFollowers(for: userName, page: page, completed: { [weak self] result in
             guard let self = self else {return}
             
             switch result {
             case .failure(let error):
                 self.presentAllertOnMainThread(title: "Invalid user data", message: error.rawValue, buttonTitle: "OK")
             case .success(let followers):
-                self.followers = followers
+                if followers.count < 100 {
+                    self.hasMoreFolloweres = false
+                }
+                self.followers.append(contentsOf: followers)
                 self.updateData()
                 print("Followers.count = \(followers.count)")
                 print(followers)
@@ -67,6 +72,7 @@ class UsersViewController: UIViewController {
     
     func configureCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout())
+        collectionView.delegate = self
         view.addSubview(collectionView)
         collectionView.backgroundColor = .systemBackground
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
@@ -89,4 +95,20 @@ class UsersViewController: UIViewController {
         }
     }
 
+}
+
+extension UsersViewController: UICollectionViewDelegate {
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+        if offsetY > contentHeight - height {
+            guard hasMoreFolloweres else {
+                return
+            }
+            page += 1
+            getFollowers(username: userName, page: page)
+        }
+    }
 }
