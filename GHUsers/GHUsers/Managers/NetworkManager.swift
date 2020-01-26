@@ -6,11 +6,12 @@
 //  Copyright © 2020 X. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public final class NetworkManager {
     static let shared = NetworkManager()
-    let baseURL = "https://api.github.com/users/"
+    private let baseURL = "https://api.github.com/users/"
+    let cache = NSCache<NSString, UIImage>()
     
     private init() {}
     
