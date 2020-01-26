@@ -27,6 +27,8 @@
 		146F3F3623D244BC00ED40B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F3F3523D244BB00ED40B0 /* User.swift */; };
 		146F3F4823DCBA9F00ED40B0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F3F4723DCBA9F00ED40B0 /* NetworkManager.swift */; };
 		146F3F4B23DCCC9100ED40B0 /* NetworkManagerErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F3F4A23DCCC9100ED40B0 /* NetworkManagerErrorMessage.swift */; };
+		146F3F4E23DDAB9800ED40B0 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F3F4D23DDAB9800ED40B0 /* FollowerCell.swift */; };
+		146F3F5023DDAD4900ED40B0 /* GUAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F3F4F23DDAD4900ED40B0 /* GUAvatarImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		146F3F3523D244BB00ED40B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		146F3F4723DCBA9F00ED40B0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		146F3F4A23DCCC9100ED40B0 /* NetworkManagerErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerErrorMessage.swift; sourceTree = "<group>"; };
+		146F3F4D23DDAB9800ED40B0 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
+		146F3F4F23DDAD4900ED40B0 /* GUAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUAvatarImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +100,12 @@
 		1437F65123D108BE00E6FAC0 /* UILib */ = {
 			isa = PBXGroup;
 			children = (
+				146F3F4C23DDAB6600ED40B0 /* Cells */,
 				144096A523BEA57600A53114 /* GUButton.swift */,
 				144096A723BEA87700A53114 /* GUTextField.swift */,
 				1437F65523D110FE00E6FAC0 /* GUTitleLabel.swift */,
 				1437F65723D112EE00E6FAC0 /* GUBodyLabel.swift */,
+				146F3F4F23DDAD4900ED40B0 /* GUAvatarImageView.swift */,
 			);
 			path = UILib;
 			sourceTree = "<group>";
@@ -200,6 +206,14 @@
 				146F3F4A23DCCC9100ED40B0 /* NetworkManagerErrorMessage.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		146F3F4C23DDAB6600ED40B0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				146F3F4D23DDAB9800ED40B0 /* FollowerCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +327,8 @@
 				146F3F3423D2446600ED40B0 /* Follower.swift in Sources */,
 				1437F64F23D107D100E6FAC0 /* SearchVC+UITextFieldDelegate.swift in Sources */,
 				146F3F3623D244BC00ED40B0 /* User.swift in Sources */,
+				146F3F4E23DDAB9800ED40B0 /* FollowerCell.swift in Sources */,
+				146F3F5023DDAD4900ED40B0 /* GUAvatarImageView.swift in Sources */,
 				144096A223BE95D200A53114 /* SearchViewController.swift in Sources */,
 				144096A423BE975800A53114 /* FavoritesViewController.swift in Sources */,
 				1437F65C23D11A9200E6FAC0 /* ViewController+Allert.swift in Sources */,
