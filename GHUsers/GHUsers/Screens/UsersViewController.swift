@@ -9,23 +9,36 @@
 import UIKit
 
 class UsersViewController: UIViewController {
+    
+    enum Section {
+        case main
+    }
+    
     var userName: String!
+    var followers = [Follower]()
+    
     var collectionView: UICollectionView!
+    var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
         configureVC()
         getFollowers()
+        configureCollectionView()
+        configureDataSource()
     }
     
     func getFollowers() {
-        NetworkManager.shared.getFollowers(for: userName, page: 1, completed: { result in
+        NetworkManager.shared.getFollowers(for: userName, page: 1, completed: { [weak self] result in
+            guard let self = self else {return}
             
             switch result {
             case .failure(let error):
                 self.presentAllertOnMainThread(title: "Invalid user data", message: error.rawValue, buttonTitle: "OK")
             case .success(let followers):
+                self.followers = followers
+                self.updateData()
                 print("Followers.count = \(followers.count)")
                 print(followers)
             }
@@ -56,9 +69,25 @@ class UsersViewController: UIViewController {
     func configureCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout())
         view.addSubview(collectionView)
-        collectionView.backgroundColor = .systemPink
+        collectionView.backgroundColor = .systemBackground
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
     }
     
+    func configureDataSource() {
+        dataSource = UICollectionViewDiffableDataSource<Section, Follower>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, follower) -> UICollectionViewCell? in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseID, for: indexPath) as! FollowerCell
+            cell.set(follower: follower)
+            return cell
+        })
+    }
+    
+    func updateData() {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(followers)
+        DispatchQueue.main.async {
+            self.dataSource.apply(snapshot,animatingDifferences: true)
+        }
+    }
 
 }
